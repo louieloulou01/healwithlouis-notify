@@ -3,36 +3,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Heal With Louis</title>
+  <title>You're Almost There - Heal With Louis</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" href="Heal With Louis.png">
   <style>
     body {
-      margin: 0;
-      background-color: #f7f7f7;
+      background-color: #f9f9f9;
+      font-family: Arial, sans-serif;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      flex-direction: column;
-      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
     }
     img {
-      max-width: 90%;
-      height: auto;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
       margin-bottom: 20px;
     }
-    .message {
-      font-size: 1.2em;
-      color: #333;
-      text-align: center;
+    h1 {
+      font-size: 1.6em;
+      margin-bottom: 10px;
+      color: #222;
+    }
+    p {
+      font-size: 1em;
+      color: #444;
+      max-width: 500px;
+      margin-bottom: 25px;
+    }
+    a.button {
+      background-color: #3366ff;
+      color: white;
+      padding: 14px 26px;
+      text-decoration: none;
+      font-size: 1.1em;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+    a.button:hover {
+      background-color: #254eda;
     }
   </style>
 </head>
 <body>
+
   <img src="Heal With Louis.png" alt="Heal With Louis">
-  <div class="message">Loading your eBook…</div>
+  <h1>You're Almost There!</h1>
+  <p>
+    Before you access your free eBook, take a second to stay connected.<br>
+    Click the <strong>🔔 bell icon</strong> in the bottom-left corner to get occasional bonuses, healing offers, and special discounts!<br><br>
+    Then click the button below to continue.
+  </p>
+
+  <a class="button" href="https://www.healwithlouis.com/8e232141-07e78ebe-9a28893" target="_blank">Access My Free eBook</a>
 
   <!-- Webpushr SDK -->
   <script>
@@ -44,20 +72,8 @@
       l.async=1;
       l.src=u;
       f.parentNode.insertBefore(l,f);
-    })(window,document,"script","https://cdn.webpushr.com/app.min.js");
-
-    // Wait for SDK to load, then show prompt
-    setTimeout(() => {
-      if (typeof webpushr !== 'undefined') {
-        webpushr('setup', { key: window.webpushrKey });
-        webpushr('subscribe'); // force the native browser popup
-      }
-    }, 1000);
-
-    // Redirect after 4000ms
-    setTimeout(() => {
-      window.location.href = "https://www.healwithlouis.com/8e232141-07e78ebe-9a28893";
-    }, 4000);
+    })(window,document,'script','https://cdn.webpushr.com/app.min.js');
   </script>
+
 </body>
 </html>
