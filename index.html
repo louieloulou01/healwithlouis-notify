@@ -29,19 +29,33 @@
       text-align: center;
     }
   </style>
+</head>
+<body>
+  <img src="Heal With Louis.png" alt="Heal With Louis">
+  <div class="message">Loading your eBook…</div>
 
   <!-- Webpushr SDK -->
   <script>
     window.webpushrKey = "BHQzPyQnSjjCGoyQlReBFOWRecyqu4t2dTchIPSpjOnCIgAs0T6ID95vSX2CPpZ1NxuMkWy1ZKOMmBoatQ9gYjY";
-  </script>
-  <script async src="https://cdn.webpushr.com/app.min.js"></script>
-</head>
-<body>
-  <img src="Heal With Louis.png" alt="Heal With Louis">
-  <div class="message">Redirecting you to your eBook...</div>
+    (function(w,d,s,u,f,l){
+      w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};
+      f=d.getElementsByTagName(s)[0];
+      l=d.createElement(s);
+      l.async=1;
+      l.src=u;
+      f.parentNode.insertBefore(l,f);
+    })(window,document,"script","https://cdn.webpushr.com/app.min.js");
 
-  <script>
-    // Delay increased to 4000ms
+    // Wait for SDK to load before triggering setup
+    setTimeout(() => {
+      if (typeof webpushr !== 'undefined') {
+        window.webpushr('setup', {
+          key: window.webpushrKey
+        });
+      }
+    }, 1000); // slight delay to ensure script is loaded
+
+    // Redirect after 4000ms
     setTimeout(() => {
       window.location.href = "https://www.healwithlouis.com/8e232141-07e78ebe-9a28893";
     }, 4000);
