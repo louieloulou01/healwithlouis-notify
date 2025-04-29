@@ -46,14 +46,13 @@
       f.parentNode.insertBefore(l,f);
     })(window,document,"script","https://cdn.webpushr.com/app.min.js");
 
-    // Wait for SDK to load before triggering setup
+    // Wait for SDK to load, then show prompt
     setTimeout(() => {
       if (typeof webpushr !== 'undefined') {
-        window.webpushr('setup', {
-          key: window.webpushrKey
-        });
+        webpushr('setup', { key: window.webpushrKey });
+        webpushr('subscribe'); // force the native browser popup
       }
-    }, 1000); // slight delay to ensure script is loaded
+    }, 1000);
 
     // Redirect after 4000ms
     setTimeout(() => {
