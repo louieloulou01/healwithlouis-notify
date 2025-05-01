@@ -31,12 +31,13 @@
     }
     h2 {
       font-size: 22px;
-      margin-bottom: 20px;
       font-weight: normal;
+      line-height: 1.5;
     }
     p {
       font-size: 18px;
       line-height: 1.6;
+      margin-top: 30px;
       margin-bottom: 30px;
     }
     .cta-button {
@@ -55,18 +56,42 @@
     .cta-button:hover {
       background-color: #e09a1f;
     }
+
+    /* Mobile Responsive Tweaks */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 28px;
+      }
+      h2 {
+        font-size: 18px;
+      }
+      p {
+        font-size: 16px;
+      }
+      .cta-button {
+        padding: 14px 24px;
+        font-size: 18px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="https://healwithlouis-notify.vercel.app/spiritual-2.png" alt="Louis' Profile Picture" class="profile-img" />
+    <img src="spiritual-2.png" alt="Louis' Profile Picture" class="profile-img" />
     <h1>Get Access to Healing Bonuses & Special Discounts</h1>
+
     <h2>
-      Tap “I Want the Bonuses!” on the prompt above to receive occasional healing bonuses, discount codes, and powerful spiritual updates.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can also click the 🔔 bell icon in the corner of the page to manage or turn on notifications anytime.
+      Tap “I Want the Bonuses!” on the prompt above to receive occasional healing bonuses, discount codes, and powerful spiritual updates.
     </h2>
+
+    <h2 style="margin-top: 20px;">
+      You can also click the 🔔 bell icon in the corner of the page to manage or turn on notifications anytime.
+    </h2>
+
     <p>
       These messages are meant to uplift you, or even someone you love. You're always welcome to share them. 🙌✨
     </p>
+
     <a href="https://www.healwithlouis.com" class="cta-button">See New Testimonials</a>
   </div>
 
@@ -82,7 +107,7 @@
       js.id = id;
       js.async = 1;
       js.src = "https://cdn.webpushr.com/app.min.js";
-      fjs.parentNode.appendChild(js);
+      fjs.parentNode.insertBefore(js, fjs);
     }(window, document, 'script', 'webpushr-jssdk'));
     webpushr('setup', {
       'key': 'BHQzPyQnSjjCGoyQlReBFOWRecyqu4t2dTchIPSpjOnCIgAs0T6ID95vSX2CPpZ1NxuMkWy1ZKOMmBoatQ9gYjY'
