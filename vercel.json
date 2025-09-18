@@ -1,0 +1,11 @@
+{
+  "redirects": [
+    { "source": "/", "destination": "/unlock-ebook-access-v3.html", "permanent": false }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+    }
+  ]
+}
